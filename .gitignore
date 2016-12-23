@@ -1,0 +1,10 @@
+.idea/
+.publish/
+__pycache__/
+dist/
+node_modules/
+
+*.map
+*.pyc
+*.sqlite3
+local_settings.py

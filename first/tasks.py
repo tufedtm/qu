@@ -20,7 +20,8 @@ def xsum(numbers):
 
 
 @shared_task
-def asd():
-    for item in range(100000000000000):
-        xx = Asd(ti=item)
-        xx.save()
+def asd(item_id):
+    item = Asd.objects.get(id=item_id)
+    for i in range(item.co):
+        item.ti += 1
+        item.save()

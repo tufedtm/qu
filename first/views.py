@@ -1,9 +1,11 @@
-from django.http import HttpResponse
+from django.views.generic import CreateView, ListView
 
-from .tasks import asd
 from .models import Asd
+from .forms import Foorm
 
 
-def index(request):
-    asd.delay()
-    return HttpResponse(Asd.objects.count())
+class Create(CreateView, ListView):
+    model = Asd
+    template_name = 'first/asd.html'
+    success_url = '/'
+    form_class = Foorm
